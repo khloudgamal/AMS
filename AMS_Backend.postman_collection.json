@@ -1,0 +1,548 @@
+{
+	"info": {
+		"_postman_id": "0ffa496f-2ffb-4ef5-8fbd-5495a38537bc",
+		"name": "AMS_Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26972165",
+		"_collection_link": "https://bold-shadow-24344.postman.co/workspace/New-Team-Workspace~d444b628-dd5d-4811-8824-e54cd9cb1c47/collection/26695573-0ffa496f-2ffb-4ef5-8fbd-5495a38537bc?action=share&creator=26972165&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "authentication",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\": \"arwa sameh\",\r\n    \"password\": \"123456789\",\r\n    \"email\": \"arwa@gmail.com\",\r\n    \"phone\": \"012645366663\",\r\n    \"type\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "39a8c0914aa9d26c24b7be3d06b73c12",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"password\": \"2012karim\",\r\n    \"email\": \"karim@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin control",
+			"item": [
+				{
+					"name": "add_acc",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "bcf450275b2c59299a452652026c25b3",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"user_name\": \"laaaaaaaaaaaa\",\r\n    \"password\": \"admin1234\",\r\n    \"email\": \"sssssssss@gmail.com\",\r\n    \"phone\": \"01112323337\",\r\n    \"type\": \"seller\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/admin_controls/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"admin_controls",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_acc",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "bcf450275b2c59299a452652026c25b3",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/admin_controls/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"admin_controls",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view_transactions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "bcf450275b2c59299a452652026c25b3",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/admin_controls",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"admin_controls"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_acc",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "43c0c87f386d6b5b029db9d744af8228",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\": \"asmaa mohamed\",\r\n    \"password\": \"admin1234\",\r\n    \"email\": \"asmaa@gmail.com\",\r\n    \"phone_number\": \"012645366663\",\r\n    \"type\": \"seller\",\r\n    \"status\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/admin_controls/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"admin_controls",
+								"5"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bidder_control",
+			"item": [
+				{
+					"name": "list_auctions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "39a8c0914aa9d26c24b7be3d06b73c12",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/auctions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"auctions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bid_on_auction",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "9c31c4665d97fdd1c14aa3698830784a",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"officialprice\":\"9000000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/auctions/bid/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"auctions",
+								"bid",
+								"20"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "39a8c0914aa9d26c24b7be3d06b73c12",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/auctions/view_wen/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"auctions",
+								"view_wen",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "seller_control",
+			"item": [
+				{
+					"name": "view",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "2f9680ed15530d1ccc49696676807800",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/auctions/view1/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"auctions",
+								"view1",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_auction",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "a1d03aae302a3a4ed49a0fd536fa67c3",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "ferrari",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "car",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "gamdaaa",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/LENOVO/Pictures/ferrari.jpg"
+								},
+								{
+									"key": "start_date",
+									"value": "2023-04-22 12:20:00",
+									"type": "text"
+								},
+								{
+									"key": "end_date",
+									"value": "2023-04-23 12:20:00",
+									"type": "text"
+								},
+								{
+									"key": "officialprice",
+									"value": "60000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/auctions/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"auctions",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_auction",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "2f9680ed15530d1ccc49696676807800",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "hussin",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "carsss",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "3rbya hayla yyyyyyyyyyyyyyyyyyy",
+									"type": "text"
+								},
+								{
+									"key": "start_date",
+									"value": "2023-03-02 11:00:00",
+									"type": "text"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-04-02 11:06:00",
+									"type": "text"
+								},
+								{
+									"key": "officialprice",
+									"value": "7000000",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/LENOVO/Pictures/ferrari.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/auctions/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"auctions",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_auction",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "2f9680ed15530d1ccc49696676807800",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/auctions/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"auctions",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
